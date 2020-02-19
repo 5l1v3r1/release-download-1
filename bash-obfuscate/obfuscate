@@ -1,0 +1,109 @@
+#!/bin/bash
+
+
+function obfuscate () {
+Cesar=$1
+	if [ -e $Nombre ]; then
+		rm $Nombre
+	fi
+
+
+touch $Nombre
+echo "#!/usr/bin/env bash" >> $Nombre
+echo " " >> $Nombre
+echo "# Obfuscate by HTR-TECH (Tahmid Rayat)" >> $Nombre
+echo "# Github : https://github.com/htr-tech" >> $Nombre
+echo " " >> $Nombre
+echo "# Sorry Bro ! But You Can not Decrypt It :P" >> $Nombre
+echo " " >> $Nombre
+printf "HTRTECH=" >> $Nombre
+printf "$" >> $Nombre
+printf "(mktemp)\n" >> $Nombre
+printf "base64 -d  >$" >> $Nombre
+printf "{" >> $Nombre
+printf "HTRTECH}<<TAHMIDRAYAT\n" >> $Nombre  #DIXIE
+echo "$(base64 $file)" >> $Nombre
+echo "TAHMIDRAYAT" >> $Nombre
+printf "source $" >> $Nombre
+printf "{" >> $Nombre
+printf "HTRTECH}\n" >> $Nombre
+printf "rm -rf $" >> $Nombre
+printf "{" >> $Nombre
+printf "HTRTECH}" >> $Nombre
+
+
+
+}
+function verifucar {
+
+	if [ ! -e $file ]; then
+		sleep 1
+echo
+echo "      File Doesn not Exist"
+echo
+help
+	fi
+}
+function help {
+echo "Usage: obfuscate -i <file.sh> -o <new.sh>"
+echo
+echo "Option:      Created by @HTR-TECH"  
+echo "  -o, --Nombre                     New Name"
+echo "  -i, --Ruta             File to be obfuscated"
+echo "           "
+echo "   obfuscate -i File.sh -o (New file.sh) "
+echo
+echo "Visit Github"
+echo "           obfuscate --visit --channel"
+echo "Visit Instagram"
+echo "           obfuscate --insta --htr "
+echo
+ exit
+ }
+
+if [ $# -eq 0 ] || [ ! -z $2 ] || [ ! -z $3 ] || [ ! -z $4 ]; then
+
+
+case $1 in
+	"-i")
+		;;
+	"--insta")
+am start -a android.intent.action.VIEW https://www.instagram.com/tahmid.rayat/
+;;
+"--visit")
+am start -a android.intent.action.VIEW https://github.com/htr-tech/
+;;
+	*)
+		help
+		;;
+esac
+
+case $3 in
+	"-o")
+		;;
+	"--htr")
+am start -a android.intent.action.VIEW https://www.instagram.com/tahmid.rayat/
+;;
+"--channel")
+	;;
+	*)
+	help
+		;;
+esac
+
+
+for Nombre in $4
+do
+
+
+for file in $2
+do
+ls &>> /dev/null
+done
+
+verifucar 
+obfuscate
+done
+else
+	help
+fi
