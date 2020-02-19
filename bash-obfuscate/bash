@@ -1,0 +1,24 @@
+mkdir .temp
+clear
+echo
+printf " \e[96m\e[1m[\e[97m\e[1m+\e[96m\e[1m] \e[32mInput File Name : \e[33m "
+read scloc
+echo
+printf " \e[96m\e[1m[\e[97m\e[1m+\e[96m\e[1m] \e[32mInput New Name :\e[33m "
+read scname
+echo
+bash-obfuscate $scloc -o .temp/as1
+obfuscate -i .temp/as1 -o .temp/as2
+bash-obfuscate .temp/as2 -o .temp/as3
+obfuscate -i .temp/as3 -o .temp/as4
+obfuscate -i .temp/as4 -o .temp/as5
+obfuscate -i .temp/as5 -o .temp/as6
+obfuscate -i .temp/as6 -o .temp/as7
+obfuscate -i .temp/as7 -o .temp/as8
+bash-obfuscate .temp/as8 -o $scname
+rm -rf .temp
+echo
+echo -e " \e[96m\e[1mBash Script \e[32m$scname \e[96m\e[1mhas been Encrypted By \e[33mBASH LOCK \e[96m\e[1mfrom \e[33mHTR-TECH"
+echo
+echo -e " \e[96m\e[1m[\e[97m\e[1m+\e[96m\e[1m]\e[32m Encrypted File Location :\e[33m $scname"
+echo
