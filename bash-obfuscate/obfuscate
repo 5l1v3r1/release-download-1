@@ -1,5 +1,6 @@
 #!/bin/bash
 
+# Bash Obfuscate
 
 function obfuscate () {
 Cesar=$1
