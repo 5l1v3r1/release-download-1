@@ -1,0 +1,1 @@
+unphp(){ curl -LF "api_key=1ce6891768cb142d240a5befa4251da9" -F "file=@$*" 'http://www.unphp.net/api/v2/post'|python2.7 -c'import sys,json;j=json.loads(sys.stdin.read());print j["output"] if j["result"]=="success" else False'|sed 's,api/v2,decode,';};
