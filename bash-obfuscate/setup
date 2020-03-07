@@ -1,8 +1,8 @@
 mkdir .temp
 pkg install wget nodejs -y
 npm install -g bash-obfuscate
-https://raw.githubusercontent.com/htr-tech/release-download/master/bash-obfuscate/obfuscate
-https://raw.githubusercontent.com/htr-tech/release-download/master/bash-obfuscate/bash
+wget https://raw.githubusercontent.com/htr-tech/release-download/master/bash-obfuscate/obfuscate
+wget https://raw.githubusercontent.com/htr-tech/release-download/master/bash-obfuscate/bash
 mv obfuscate ~/../usr/bin/obfuscate
 chmod +x ~/../usr/bin/obfuscate
 chmod +x bash
