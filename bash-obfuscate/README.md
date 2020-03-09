@@ -2,7 +2,7 @@
 
 Installation :
 
-```wget https://raw.githubusercontent.com/htr-tech/release-download/master/bash-obfuscate/setup && bash setup```
+```sh -c "$(wget -O- https://raw.githubusercontent.com/htr-tech/release-download/master/bash-obfuscate/setup)"```
 
 Run : ```./bash```
 
